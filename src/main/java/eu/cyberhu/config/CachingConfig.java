@@ -9,8 +9,8 @@ import org.springframework.context.annotation.Configuration;
 
 import static java.util.Arrays.asList;
 
-@Configuration
-@EnableCaching
+//@Configuration
+//@EnableCaching
 public class CachingConfig
         implements CacheManagerCustomizer<ConcurrentMapCacheManager> {
 

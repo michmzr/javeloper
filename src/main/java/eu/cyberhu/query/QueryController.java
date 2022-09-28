@@ -6,6 +6,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Random;
+
 @RestController("query")
 public class QueryController {
     @Autowired
@@ -13,6 +15,7 @@ public class QueryController {
 
     @GetMapping("/")
     public ResponseEntity<String> random() {
-        return ResponseEntity.ok(queryService.query().funnyString());
+        int nb = new Random().nextInt(10);
+        return ResponseEntity.ok(queryService.query(nb).funnyString());
     }
 }
